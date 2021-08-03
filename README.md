@@ -1,4 +1,3 @@
 # GitPractice
 
-I added a readme.
-Hello world.
+I added a readme. Removed.
