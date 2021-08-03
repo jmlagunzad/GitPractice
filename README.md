@@ -1,3 +1,3 @@
 # GitPractice
 
-I added a readme. Removed.
+I added a readme. Test poll SCM.
