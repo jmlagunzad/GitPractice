@@ -10,7 +10,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                bat 'mkdir testdir'
+                if (bat 'exist testdir') {
+                    echo 'testdir exists'
+                } else {
+                    bat 'mkdir testdir'
+                }
+                
                 bat 'cd testdir'
                 input "${STRING}?"
             }
@@ -18,7 +23,11 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                bat 'echo hello.txt'
+                if (bat 'exist hello.txt') {
+                    echo 'hello.txt exists'
+                } else {
+                    bat 'echo hello.txt'
+                }
             }
         }
         stage('Deploy') {
