@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                dir('C:\\Users\\Jm\\Desktop\\Git Clones\\testdir')
+                // dir('C:\\Users\\Jm\\Desktop\\Git Clones\\testdir')
                 input "${STRING}?"
             }
         }
