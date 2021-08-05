@@ -17,11 +17,11 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                // if (fileExists('hello.txt') {
-                //     echo 'hello.txt exists'
-                // } else {
-                //     bat 'echo hello.txt'
-                // }
+                if (fileExists('hello.txt') {
+                    echo 'hello.txt exists'
+                } else {
+                    bat 'echo hello.txt'
+                }
             }
         }
         stage('Deploy') {
@@ -29,7 +29,7 @@ pipeline {
                 STRING = 'Deploying'
             }
             steps {
-                echo '${STRING}....'
+                echo "${STRING}...."
             }
         }
     }
