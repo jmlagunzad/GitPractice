@@ -5,14 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'mkdir testdir'
-                sh 'cd testdir'
+                bat 'mkdir testdir'
+                bat 'cd testdir'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'touch hello.txt'
+                bat 'touch hello.txt'
             }
         }
         stage('Deploy') {
