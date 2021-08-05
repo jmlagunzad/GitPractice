@@ -17,10 +17,10 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                if(STRING == 'Vibe check')
-                {
-                    echo 'Absolutelay.'
-                }
+                // if(STRING == 'Vibe check')
+                // {
+                //     echo 'Absolutelay.'
+                // }
             }
         }
         stage('Deploy') {
