@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                if (bat 'exist testdir') {
+                if (fileExists("testdir")) {
                     echo 'testdir exists'
                 } else {
                     bat 'mkdir testdir'
@@ -23,7 +23,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                if (bat 'exist hello.txt') {
+                if (fileExists('hello.txt') {
                     echo 'hello.txt exists'
                 } else {
                     bat 'echo hello.txt'
