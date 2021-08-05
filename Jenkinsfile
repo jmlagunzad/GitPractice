@@ -17,9 +17,9 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                if(!fileExists("hello.txt"))
+                if(STRING == 'Vibe check')
                 {
-                    bat "echo hello.txt"
+                    echo 'Absolutelay.'
                 }
             }
         }
