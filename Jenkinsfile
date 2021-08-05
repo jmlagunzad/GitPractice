@@ -10,11 +10,11 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                if (fileExists("testdir")) {
-                    echo 'testdir exists'
-                } else {
-                    bat 'mkdir testdir'
-                }
+                // if (fileExists("testdir")) {
+                //     echo 'testdir exists'
+                // } else {
+                //     bat 'mkdir testdir'
+                // }
                 
                 bat 'cd testdir'
                 input "${STRING}?"
