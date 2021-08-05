@@ -10,17 +10,16 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                bat 'cd testdir'
+                dir('C:\\Users\\Jm\\Desktop\\Git Clones\\testdir')
                 input "${STRING}?"
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                if (fileExists('hello.txt') {
-                    echo 'hello.txt exists'
-                } else {
-                    bat 'echo hello.txt'
+                if(!fileExists("hello.txt"))
+                {
+                    bat "echo hello.txt"
                 }
             }
         }
