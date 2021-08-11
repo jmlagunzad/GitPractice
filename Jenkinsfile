@@ -11,18 +11,18 @@ pipeline {
             steps {
                 echo 'Building..'
                 // dir('C:\\Users\\Jm\\Desktop\\Git Clones\\testdir')
-                input "${STRING}?"
+//                 input "${STRING}?"
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-//                 script {
-//                     if(STRING == 'Vibe check')
-//                     {
-//                         echo 'Absolutelay.'
-//                     }
-//                 }
+                script {
+                    if(STRING == 'Vibe check')
+                    {
+                        echo 'Absolutelay.'
+                    }
+                }
             }
         }
         stage('Deploy') {
