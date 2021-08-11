@@ -36,10 +36,14 @@ pipeline {
         stage('Parrarel') {
             parallel{
                 stage('Hello') {
-                    echo 'Hello'
+                    steps{
+                        echo 'Hello'
+                    }
                 }
                 stage('World') {
-                    echo 'World'
+                    steps{
+                        echo 'World'
+                    }
                 }
             }
             
