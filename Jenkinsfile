@@ -33,6 +33,17 @@ pipeline {
                 echo "${STRING}...."
             }
         }
+        stage('Parrarel') {
+            parallel{
+                stage('Hello') {
+                    echo 'Hello'
+                }
+                stage('World') {
+                    echo 'World'
+                }
+            }
+            
+        }
     }
 
     post {
