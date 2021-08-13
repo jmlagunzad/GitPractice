@@ -10,8 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                // dir('C:\\Users\\Jm\\Desktop\\Git Clones\\testdir')
-//                 input "${STRING}?"
+                git "https://github.com/jmlagunzad/GitPractice.git"
             }
         }
         stage('Test') {
@@ -21,6 +20,7 @@ pipeline {
                     if(STRING == 'Vibe check')
                     {
                         echo 'Absolutelay.'
+                        bat 'test.bat'
                     }
                 }
             }
