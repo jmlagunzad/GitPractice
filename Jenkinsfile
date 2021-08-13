@@ -31,7 +31,7 @@ pipeline {
             }
             steps {
                 echo "${STRING}...."
-                bat 'tesdir/hello.bat'
+                bat 'testdir/hello.bat'
             }
         }
         stage('Parrarel') {
